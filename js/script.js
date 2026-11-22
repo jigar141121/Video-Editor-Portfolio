@@ -1,0 +1,10 @@
+document.addEventListener("DOMContentLoaded", () =>
+  document.querySelectorAll("form").forEach((f) =>
+    f.addEventListener("submit", (e) => {
+      e.preventDefault();
+      let m = f.querySelector(".formmsg");
+      if (m) m.textContent = "Submitted successfully.";
+      else alert("Submitted successfully.");
+    })
+  )
+);
